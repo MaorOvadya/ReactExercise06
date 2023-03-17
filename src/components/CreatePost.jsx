@@ -128,7 +128,7 @@ const CreatePost = ({ user, handleAddPost }) => {
           - we can then set the value of the input element to an empty string
         */}
         <input className="rounded-lg w-82 text-teal-600" type="file" onChange={(e) => setImage(e.target.files[0])} ref={imageInputRef} />
-        <button className="hover:bg-teal-700 hover:text-white  hover:border-white transition-all border-teal-600 duration-700 font-normal text-ml m-0 px-5 py-0 border-solid border rounded-xl h-10 " type="submit">Submit Post</button>
+        <button className="hover:bg-teal-700 hover:text-white  hover:border-white transition-all border-teal-600 duration-700 font-normal text-ml m-0 px-5 py-0 border-solid border rounded-xl h-10 text-teal-600" type="submit">Submit Post</button>
       </form>
     </>
   );
