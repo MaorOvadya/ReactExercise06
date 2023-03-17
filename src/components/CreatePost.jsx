@@ -101,11 +101,13 @@ const CreatePost = ({ user, handleAddPost }) => {
     setImage(null)
     imageInputRef.current.value = ''
   }
+
+
   return (
     <>
-      <h1>Create New Post</h1>
-      <form onSubmit={handleSubmit}>
-        <input
+      <h1 className=" text-2xl  text-center text-teal-600 capitalize font-bold box-border p-5">Create New Post</h1>
+      <form className="bg-gray-200 rounded-lg justify-evenly items-center border-2 flex flex-row  m-5 p-5 " onSubmit={handleSubmit}>
+        <input className="rounded-lg text-center h-10 w-96 text-teal-600"
           type="text"
           placeholder="Add Post Content"
           onChange={(e) => setContent(e.target.value)}
@@ -125,8 +127,8 @@ const CreatePost = ({ user, handleAddPost }) => {
           - we can then access the input element by using imageInputRef.current
           - we can then set the value of the input element to an empty string
         */}
-        <input type="file" onChange={(e) => setImage(e.target.files[0])} ref={imageInputRef} />
-        <button type="submit">Submit Post</button>
+        <input className="rounded-lg w-82 text-teal-600" type="file" onChange={(e) => setImage(e.target.files[0])} ref={imageInputRef} />
+        <button className="hover:bg-teal-700 hover:text-white  hover:border-white transition-all border-teal-600 duration-700 font-normal text-ml m-0 px-5 py-0 border-solid border rounded-xl h-10 " type="submit">Submit Post</button>
       </form>
     </>
   );
